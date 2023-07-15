@@ -1,0 +1,21 @@
+
+today i learn something like how to solve when any element
+is larger and out of screen size then it show yellow and black rectangel
+which shows your element is out of the screen
+
+
+so for solve this problem we need to use
+
+width & height
+but the problem is in width height we use specific number which
+work only those screen where developer build application
+if any user phone have smaller screen or bigger screen or horizontal
+then it makes problem
+
+so
+
+i learn new widget and that is // Expanded class
+this widget is very useful because it automatically allocate size of
+the element according to screen
+
+if user want to change child size than other child then use //flex
