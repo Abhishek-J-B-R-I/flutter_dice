@@ -24,6 +24,13 @@ class DicePage extends StatefulWidget {
 class _DicePageState extends State<DicePage> {
   int leftdicen = 6;
   int rightdicen = 6;
+  void lrdicen() {
+    setState(() {
+      leftdicen = Random().nextInt(6) + 1;
+      rightdicen = Random().nextInt(6) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -33,10 +40,7 @@ class _DicePageState extends State<DicePage> {
             flex: 1,
             child: TextButton(
               onPressed: () {
-                setState(() {
-                  leftdicen = Random().nextInt(6) + 1;
-                  rightdicen = Random().nextInt(6) + 1;
-                });
+                lrdicen();
               },
               child: Image(
                 image: AssetImage('images/dice$leftdicen.png'),
@@ -46,10 +50,7 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: TextButton(
               onPressed: () {
-                setState(() {
-                  rightdicen = Random().nextInt(6) + 1;
-                  leftdicen = Random().nextInt(6) + 1;
-                });
+                lrdicen();
               },
               child: Image(
                 image: AssetImage('images/dice$rightdicen.png'),
